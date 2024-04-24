@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package discover;
+
+option go_package = "./pkg/pb";
+
+service DiscoverService {
+    rpc DiscoverFeed(DiscoverFeedRequest) returns (DiscoverFeedResponse) {}
+    rpc DiscoverFeedWithTags(DiscoverFeedWithTagsRequest) returns (DiscoverFeedResponse) {}
+}
+
+message DiscoverFeedRequest {
+}
+
+message DiscoverFeedResponse {
+    repeated DiscoverFeedItem items = 1;
+}
+
+message DiscoverFeedWithTagsRequest {
+    repeated string tags = 1;
+}
+
+message DiscoverFeedItem {
+    string video_id = 1;
+    string owner_id = 2;
+    string title = 3;
+    string description = 4;
+    string url = 5;
+    repeated string tags = 6;
+    string created_at = 7;
+}
