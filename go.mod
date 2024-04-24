@@ -5,7 +5,7 @@ go 1.22.1
 require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/gocql/gocql v1.6.0
-	github.com/micro-tok/video-service v0.0.0-20240424091556-add456734b19
+	github.com/joho/godotenv v1.5.1
 	google.golang.org/grpc v1.63.2
 	google.golang.org/protobuf v1.33.0
 )
